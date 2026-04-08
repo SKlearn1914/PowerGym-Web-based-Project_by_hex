@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Membership Plans Cards */
+.card.plan {
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    color: white;
+}
+
+.card.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Basic Plan */
+.card.plan.basic {
+    background: #38bdf8; /* Blue */
+    color: black;
+}
+
+.card.plan.basic button {
+    background: white;
+    color: #38bdf8;
+}
+
+.card.plan.basic button:hover {
+    background: #0ea5e9;
+    color: black;
+}
+
+/* Premium Plan */
+.card.plan.premium {
+    background: #facc15; /* Yellow / Amber */
+    color: black;
+}
+
+.card.plan.premium button {
+    background: black;
+    color: #facc15;
+}
+
+.card.plan.premium button:hover {
+    background: #d97706;
+    color: white;
+}
+
+/* Elite Plan */
+.card.plan.elite {
+    background: #9333ea; /* Purple */
+    color: white;
+}
+
+.card.plan.elite button {
+    background: white;
+    color: #9333ea;
+}
+
+.card.plan.elite button:hover {
+    background: #7e22ce;
+    color: white;
+}
+</style>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="logo">💪 PowerGym</div>
+        <nav>
+            <ul>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#plans">Membership Plans</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+        <div class="slider">
+            <div class="slide active"
+                style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1637430308606-86576d8fef3c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://plus.unsplash.com/premium_photo-1661920538067-c48451160c72?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to PowerGym</h1>
+            <p>Transform your body, transform your life.</p>
+            <button onclick="document.getElementById('plans').scrollIntoView({behavior: 'smooth'})">Join Now</button>
+        </div>
+    </section>
+    <!-- Facilities Section -->
+    <section id="facilities" class="section">
+        <h2>Our Facilities</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=428&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Gym Equipment">
+                <h3>Modern Equipment</h3>
+                <p>Top-quality machines for strength and cardio training.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1615657973599-990d6e05fb8a?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Yoga Studio">
+                <h3>Yoga & Fitness Studio</h3>
+                <p>Dedicated space for yoga, pilates, and group workouts.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Swimming Pool">
+                <h3>Swimming Pool</h3>
+                <p>Indoor pool for relaxation, training, and aqua exercises.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Personal Training</h3>
+                <p>Work with certified trainers for personalized results.</p>
+            </div>
+            <div class="card">
+                <h3>Nutrition Plans</h3>
+                <p>Customized diet plans to support your fitness goals.</p>
+            </div>
+            <div class="card">
+                <h3>Group Classes</h3>
+                <p>Fun and motivating group workouts for all levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans Section -->
+ <section id="plans" class="section">
+    <h2>Membership Plans</h2>
+    <div class="cards">
+        <div class="card plan basic">
+            <h3>Basic</h3>
+            <p>$30/month</p>
+            <ul>
+                <li>Access to gym equipment</li>
+                <li>Locker facility</li>
+            </ul>
+            <button>Sign Up</button>
+        </div>
+        <div class="card plan premium">
+            <h3>Premium</h3>
+            <p>$50/month</p>
+            <ul>
+                <li>All Basic benefits</li>
+                <li>Group classes</li>
+                <li>Personal trainer 2x/week</li>
+            </ul>
+            <button>Sign Up</button>
+        </div>
+        <div class="card plan elite">
+            <h3>Elite</h3>
+            <p>$80/month</p>
+            <ul>
+                <li>All Premium benefits</li>
+                <li>Unlimited personal training</li>
+                <li>Nutrition plan + progress tracking</li>
+            </ul>
+            <button>Sign Up</button>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 PowerGym | Developed by SK</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
